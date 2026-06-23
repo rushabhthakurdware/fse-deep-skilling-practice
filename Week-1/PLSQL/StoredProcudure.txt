@@ -1,0 +1,100 @@
+CREATE TABLE Accounts (
+    AccountID INT PRIMARY KEY,
+    CustomerID INT,
+    Balance DECIMAL(10,2),
+    AccountType VARCHAR(20)
+);
+select * from Accounts;
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(50),
+    Salary DECIMAL(10,2)
+);
+
+select * from Employees;
+
+INSERT INTO Accounts (AccountID, CustomerID, Balance, AccountType) VALUES
+(1, 101, 10000.00, 'Savings'),
+(2, 102, 5000.00, 'Savings'),
+(3, 103, 20000.00, 'Current'),
+(4, 104, 15000.00, 'Savings'),
+(5, 105, 8000.00, 'Current');
+
+INSERT INTO Employees (EmployeeID, Name, Department, Salary) VALUES
+(1, 'Rahul', 'IT', 50000.00),
+(2, 'Sneha', 'HR', 40000.00),
+(3, 'Amit', 'IT', 60000.00),
+(4, 'Priya', 'Finance', 55000.00),
+(5, 'Karan', 'HR', 45000.00);
+
+//Scenario-1
+create or replace PROCEDURE  ProcessMonthlyInterest()
+Language plpgsql
+as $$
+begin 
+	update Accounts
+	set Balance  = Balance +(Balance*0.1)
+	where AccountType = 'Savings';
+	raise notice 'balance updated';
+end;
+$$;
+
+CALL ProcessMonthlyInterest();
+
+
+//Scenario-2
+create or replace procedure UpdateEmployeeBonus(
+	p_department varchar(20),
+	bonus_percent decimal
+)
+language plpgsql
+as $$
+begin 
+update Employees e
+set Salary  = Salary+(Salary*bonus_percent/100)
+where e.Department = p_department;
+    RAISE NOTICE 'Bonus applied to department: %', p_department;
+	end;
+$$;	
+
+CALL UpdateEmployeeBonus('IT', 10);
+
+//Scenario-3
+
+create or replace procedure TransferFunds(
+
+from_acc int ,
+to_acc int,
+amount decimal
+)
+language plpgsql
+as $$
+declare
+sender_balance decimal;
+begin 
+	select balance into sender_balance
+	from Accounts
+	where Accountid = from_acc;
+
+	if sender_balance  >= amount then
+	update Accounts
+	set Balance = Balance-amount
+	where Accountid = from_acc;
+
+	UPDATE Accounts
+        SET Balance = Balance + amount
+        WHERE AccountID = to_acc;
+
+	RAISE NOTICE 'Transfer successful from % to %', from_acc, to_acc;
+
+	else
+	
+	RAISE NOTICE 'Insufficient balance in account %', from_acc;
+end if;
+end ;
+$$;
+
+CALL TransferFunds(1, 2, 1000);
+	
