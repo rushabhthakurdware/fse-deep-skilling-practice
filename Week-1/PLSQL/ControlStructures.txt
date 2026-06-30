@@ -4,7 +4,7 @@ CREATE TABLE Customers (
     CustomerID NUMBER PRIMARY KEY,
     Age NUMBER,
     Balance NUMBER,
-    IsVIP VARCHAR2(5)
+    IsVIP VARCHAR(5)
 );
 
 CREATE TABLE Loans (

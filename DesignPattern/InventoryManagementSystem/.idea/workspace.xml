@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eab81f8c-f153-43c9-98c1-ecc5911e3b06" name="Changes" comment="" />
+    <list default="true" id="608ee013-df61-41e6-b254-4c2927037f6e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Week-1/DesignPattern/ObserverPatternExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week-1/DesignPattern/ObserverPatternExample/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,39 +15,45 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="3FHOwCeSSp0M4cVG5VllHsCl4aX" />
+  <component name="ProjectId" id="3FMjbL00vLBfFmZIhcld1dXHq38" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/shiva/OneDrive/Desktop/javaFSE/DesignPattern/ObserverPatternExample/src/Main.java"
+    "last_opened_file_path": "C:/Users/shiva/OneDrive/Desktop/javaFSE/Week-1/DataStructuresAndAlgorithm/DataStructuresAndAlgorithm/InventoryManagementSystem",
+    "onboarding.tips.debug.path": "C:/Users/shiva/OneDrive/Desktop/javaFSE/DesignPattern/InventoryManagementSystem/src/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shiva\OneDrive\Desktop\javaFSE\DesignPattern\DataStructuresAndAlgorithm" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eab81f8c-f153-43c9-98c1-ecc5911e3b06" name="Changes" comment="" />
-      <created>1781728766098</created>
+      <changelist id="608ee013-df61-41e6-b254-4c2927037f6e" name="Changes" comment="" />
+      <created>1781891913036</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1781728766098</updated>
+      <updated>1781891913036</updated>
     </task>
     <servers />
   </component>
